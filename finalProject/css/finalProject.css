@@ -1,0 +1,73 @@
+/*** Color pallette: #482027, #ED9302, #1C0E36, #8293B8, #2E435D, khaki ***/
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+
+body{
+font-family: "Jersey 10", sans-serif;
+background-color: #482027;
+float:center;
+}
+h1{
+text-align: center;
+font-size: 4em;
+}
+h2{
+text-align: center;
+font-size: 2em;
+}
+div{
+background-color: #DBEE42;
+width: 90%;
+border-bottom: black 2px solid;
+float: center;
+}
+img{
+float: left;
+width: 10%;
+margin: .5%;
+margin-right: 5%;
+border: #2E435D .3em solid;
+}
+section{
+background-image: url('../media/background.png');
+color: khaki;
+}
+button {
+display:flex;
+font-family: inherit;
+background-color: #8293B8;
+float: center;
+font-size: 2em;
+width: 12%;
+margin-top: 5%;
+margin-right: 1.15%;
+outline: #2E435D;
+cursor: pointer;
+padding: .8% 1%;
+}
+.tab {
+    font-family: "Jersey 10", sans-serif;
+    overflow: hidden;
+    background-color: #8293B8;
+    width: 100%;
+    border-bottom: black .4em solid;
+    float: center;
+
+}
+.tab button {
+    float: left;
+}
+.tab button:hover {
+    background-color: #2E435D;
+    color:white;
+}
+.tab button.active {
+    background-color: #2E435D;
+    color: khaki
+}
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+
+}
