@@ -1,8 +1,9 @@
-// Opens the home tab upon loading the page
+// Opens the home tab when loading the page
 window.onload = function () {
     openTab(null, "homeTab"); 
 }
 
+// Event listeners to call openTab based on the correct tab partition
 document.getElementById("home").addEventListener("click", function(e){
 	openTab(e,"homeTab");
 });
@@ -10,16 +11,16 @@ document.getElementById("game1").addEventListener("click", function(e){
 	openTab(e,"snakeGame");
 });
 document.getElementById("game2").addEventListener("click", function(e){
-	openTab(e,"puzzleGame");
+	openTab(e,"pongGame");
 });
 document.getElementById("game3").addEventListener("click", function(e){
-	openTab(e,"platformerGame");
+	openTab(e,"tagGame");
 });
 // Redirects the browser tab to the readme text file
 document.getElementById("readme").addEventListener("click", function(e){
     window.location.href = "readme.txt";
 });
-
+// Opens a partition tab element based on what variables are called for the function
  function openTab(e,tab){
     var i, tabcontent, tablinks;
 

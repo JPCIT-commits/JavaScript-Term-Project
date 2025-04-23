@@ -5,17 +5,17 @@ This website is still under construction. It will contain three games and be fle
 ## Games
 This website hosts three games in total. Brief overviews of each are shown below:
 
-### Twin Snakes -- UNDER EARLY DEVELOPMENT
+### Twin Snakes
 A local versus take on the classic Snake game. Duke it out between two players, controlling each snake with WASD
 and arrow key schemes respectively. Winning conditions go to the last who survives.
 
-### The Witful -- NOT STARTED
-A short level-based puzzle game featuring guiding a pointer through a grid. Obstacles will pose various challenges 
-to the player.
+### Paddles -- IN PROGRESS
+A versus game inspired by Pong, hit the ball back and forth until it passes a player's goal. 
+The W and D keys as well as the up and down arrow keys are used to control player 1 and player 2 respectively. 
+First to five points wins.
 
-### Falling Upward -- NOT STARTED
-A prototype of a puzzle-platformer game. The game controls with 4-directional movement, but the player can only
-stop once they reach another valid surface. 
+### Tag -- NOT STARTED
+An assymetrical versus game where one player chases the other.
 ------------------------------------------------------------------------------------------------------------------
 ## Contact info
 ### Author

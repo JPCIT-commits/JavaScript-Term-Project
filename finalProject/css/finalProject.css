@@ -6,20 +6,26 @@ font-family: "Jersey 10", sans-serif;
 background-color: #482027;
 float:center;
 }
-h1{
+h1, h2, h3{
 text-align: center;
 font-size: 4em;
 }
+
 h2{
-text-align: center;
 font-size: 2em;
 }
+
+h3{
+font-size: 1.5em;
+}
+
 div{
 background-color: #DBEE42;
 width: 90%;
 border-bottom: black 2px solid;
 float: center;
 }
+
 img{
 float: left;
 width: 10%;
@@ -27,10 +33,12 @@ margin: .5%;
 margin-right: 5%;
 border: #2E435D .3em solid;
 }
+
 section{
 background-image: url('../media/background.png');
 color: khaki;
 }
+
 button {
 display:flex;
 font-family: inherit;
@@ -44,6 +52,22 @@ outline: #2E435D;
 cursor: pointer;
 padding: .8% 1%;
 }
+
+button:hover {
+    background-color: #2E435D;
+    color:white;
+}
+
+button:active {
+    background-color: #2E435D;
+    color: khaki
+}
+
+.ui {
+margin: 1%;
+padding: 0px 0px;
+}
+
 .tab {
     font-family: "Jersey 10", sans-serif;
     overflow: hidden;
@@ -56,18 +80,18 @@ padding: .8% 1%;
 .tab button {
     float: left;
 }
-.tab button:hover {
-    background-color: #2E435D;
-    color:white;
-}
-.tab button.active {
-    background-color: #2E435D;
-    color: khaki
-}
+
 .tabcontent {
     display: none;
     padding: 6px 12px;
     border: 1px solid #ccc;
     border-top: none;
 
+}
+
+canvas{
+    border: 5px solid plum;
+    text-align:center;
+    background-color: black;
+    margin-left: 33%;
 }

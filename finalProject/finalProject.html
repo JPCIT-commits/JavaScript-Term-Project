@@ -3,14 +3,15 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Final Project</title>
+<link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
 <link href="css/finalProject.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <div class="tab">
     <img src="media/plumstation.png" type="image">
     <button class="tablinks" id="home">Home</button>
-    <button class="tablinks" id="game1">Twin Snakes</button>
-    <button class="tablinks" id="game2">The Witful</button>
+    <button class="tablinks" id="game1" onclick="startSnake(), restartSnake()">Twin Snakes</button>
+    <button class="tablinks" id="game2" onclick="startPaddles(), restartPaddles()">Paddles</button>
     <button class="tablinks" id="game3">Falling Upward</button>
 </div>
 
@@ -23,22 +24,37 @@
 </section>
 
 <section id="snakeGame" class="tabcontent">
-    <h1>Twin Snakes</h1>
-    <h2>A local versus take on the classic Snake game. Duke it out between two players, controlling each snake with WASD
-        and arrow key schemes respectively. Winning conditions go to the last who survives.</h2>
+    <h1>Twin Snakes</h1> 
+    <h3> Controls: </br> Player 1 (red): WASD </br> Player 2 (blue): Arrow Keys</br></br></h3>
+    <canvas id="snakeCanvas"></canvas>
+    <button class="ui" id="startSnakeGame" style="margin-left: 44%">Start</button>
+    <button class="ui" id="resetSnakeGame" style="margin-left: 44%">Reset</button> 
+    <h2 id=>A local versus take on the classic Snake game. Duke it out between two players, controlling each snake with WASD
+        and arrow key schemes respectively. Winning conditions go to the last who survives or the first to 10 plums.</h2>
+</section>
+
+<section id="pongGame" class="tabcontent">
+    <h1>Paddles</h1>
+    <h3>Controls: </br> Player 1 (red): W and D keys </br> Player 2 (blue): Up and down arrow keys</br></br></h3>
+    <canvas id="pongCanvas"></canvas>
+    <button class="ui" id="startPongGame" style="margin-left: 44%">Start</button>
+    <button class="ui" id="resetPongGame" style="margin-left: 44%">Reset</button> 
+    <h2>A two-player game inspired by Pong, hit the ball back and forth until it passes a player's goal. 
+        The W and D keys as well as the up and down arrow keys are used to control player 1 and player 2 respectively.
+        First to five points wins.</h2>
 </section >
 
-<section id="puzzleGame" class="tabcontent">
-    <h1>The Witful</h1>
-    <h2>A short level-based puzzle game featuring guiding a pointer through a grid. Obstacles will pose various challenges 
-        to the player.</h2>
-</section >
-
-<section id="platformerGame" class="tabcontent">
+<section id="tagGame" class="tabcontent">
     <h1>Falling Upward</h1>
-    <h2>A prototype of a puzzle-platformer game. The game controls with 4-directional movement, but the player can only
-        stop once they reach another valid surface. </h2>
+    <h3>Controls:</h3>
+    <canvas id="tagCanvas"></canvas>
+    <button class="ui" id="startTagGame" style="margin-left: 44%">Start</button>
+    <button class="ui" id="resetTagGame" style="margin-left: 44%">Reset</button> 
+    <h2>An assymetrical versus game where one player chases the other. </h2>
 </section >
 <script src="js/finalProject.js"></script>
+<script src="games/twinSnakes/js/twinSnakes.js"></script>
+<script src="games/paddles/js/paddles.js"></script>
+<script src="games/tag/js/tag.js"></script>
 </body>
 </html>

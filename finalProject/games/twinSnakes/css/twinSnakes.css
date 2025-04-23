@@ -1,0 +1,6 @@
+canvas{
+    display: flex;
+    border: 5px solid plum;
+    float: center;
+    text-align:center;
+}
