@@ -12,20 +12,19 @@
     <button class="tablinks" id="home">Home</button>
     <button class="tablinks" id="game1" onclick="startSnake(), restartSnake()">Twin Snakes</button>
     <button class="tablinks" id="game2" onclick="startPaddles(), restartPaddles()">Paddles</button>
-    <button class="tablinks" id="game3">Falling Upward</button>
+    <button class="tablinks" id="game3">Tag</button> <!--Uses jquery to load the game instead-->
 </div>
 
 <section id="homeTab" class="tabcontent">
     <h1>Welcome!</h1>
     <h2>Please use the buttons on the bar above to navigate the site.</h2><br><br><br>
-    <h2>More information on this site is available in the readme file:</h2>
+    <h2>More information on this site and it's games are available in the readme file:</h2>
     <button class="tablinks" id="readme" style="margin-left: 44%">Readme</button><br><br><br>
-
 </section>
 
 <section id="snakeGame" class="tabcontent">
     <h1>Twin Snakes</h1> 
-    <h3> Controls: </br> Player 1 (red): WASD </br> Player 2 (blue): Arrow Keys</br></br></h3>
+    <h3> Controls: </br> Player 1 (red): WASD </br> Player 2 (blue): Arrow Keys</br></h3>
     <canvas id="snakeCanvas"></canvas>
     <button class="ui" id="startSnakeGame" style="margin-left: 44%">Start</button>
     <button class="ui" id="resetSnakeGame" style="margin-left: 44%">Reset</button> 
@@ -33,25 +32,29 @@
         and arrow key schemes respectively. Winning conditions go to the last who survives or the first to 10 plums.</h2>
 </section>
 
-<section id="pongGame" class="tabcontent">
+<section id="paddlesGame" class="tabcontent">
     <h1>Paddles</h1>
-    <h3>Controls: </br> Player 1 (red): W and D keys </br> Player 2 (blue): Up and down arrow keys</br></br></h3>
-    <canvas id="pongCanvas"></canvas>
-    <button class="ui" id="startPongGame" style="margin-left: 44%">Start</button>
-    <button class="ui" id="resetPongGame" style="margin-left: 44%">Reset</button> 
-    <h2>A two-player game inspired by Pong, hit the ball back and forth until it passes a player's goal. 
+    <h3>Controls: </br> Player 1 (red): W and D keys </br> Player 2 (blue): Up and down arrow keys</br></h3>
+    <canvas id="paddlesCanvas"></canvas>
+    <button class="ui" id="startPaddlesGame" style="margin-left: 44%">Start</button>
+    <button class="ui" id="resetPaddlesGame" style="margin-left: 44%">Reset</button> 
+    <h2>A two-player game inspired by Pong, hit the ball back and forth as it speeds up until the ball passes a player's goal. 
         The W and D keys as well as the up and down arrow keys are used to control player 1 and player 2 respectively.
         First to five points wins.</h2>
 </section >
 
 <section id="tagGame" class="tabcontent">
-    <h1>Falling Upward</h1>
-    <h3>Controls:</h3>
+    <h1>Tag</h1>
+    <h3> Controls: </br> Player 1 (red): WASD </br> Player 2 (blue): Arrow Keys</br></h3>
     <canvas id="tagCanvas"></canvas>
     <button class="ui" id="startTagGame" style="margin-left: 44%">Start</button>
     <button class="ui" id="resetTagGame" style="margin-left: 44%">Reset</button> 
-    <h2>An assymetrical versus game where one player chases the other. </h2>
+    <h2>An asymetric versus game where one player chases the other, losing health so long as they are "it". 
+        Player 1 start's as the "it" player, having to tag player 2 to make them "it".
+        Both players a have full range movement with the WASD and the Arrow Keys respectively.
+        When a player's health hits 0, the game ends.  </h2>
 </section >
+<script src="js/jquery.js"></script>
 <script src="js/finalProject.js"></script>
 <script src="games/twinSnakes/js/twinSnakes.js"></script>
 <script src="games/paddles/js/paddles.js"></script>

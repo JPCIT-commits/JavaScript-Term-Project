@@ -11,7 +11,7 @@ document.getElementById("game1").addEventListener("click", function(e){
 	openTab(e,"snakeGame");
 });
 document.getElementById("game2").addEventListener("click", function(e){
-	openTab(e,"pongGame");
+	openTab(e,"paddlesGame");
 });
 document.getElementById("game3").addEventListener("click", function(e){
 	openTab(e,"tagGame");

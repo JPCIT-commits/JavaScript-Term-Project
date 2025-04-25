@@ -1,12 +1,9 @@
-import ('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap'); 
-
 // Defining variables
 var playerSnake1 = [];
 var playerSnake2 = [];
 var snakeLengthP1;
 var snakeLengthP2;
 var plum; 
-var hud;
 var player1Score;
 var player2Score;
 var directionP1;
@@ -15,7 +12,7 @@ img = new Image();
 img.src = 'games/twinSnakes/media/plum_isolated.png';
 
 function startSnake(){
-  // Defines player components, calls function to create playing area
+  // Initializes player components, calls function to create playing area
   playerSnake1 = [{x:50, y:100}];
   playerSnake2 = [{x:500, y:300}];
   snakeLengthP1 = 6;
@@ -31,6 +28,9 @@ function startSnake(){
 function restartSnake(){
   // Ends the game interval and calls to start the game again
   snakeGameArea.clear();
+  snakeGameArea.context.fillStyle = "plum";
+  snakeGameArea.context.font = "bold 3em 'Jersey 10'";
+  snakeGameArea.context.fillText("Press Start", 200, 200); // Text prompts player to press the start button
   clearInterval(snakeGameArea.interval);
 }
 
@@ -50,7 +50,6 @@ var snakeGameArea = {
         this.context = this.canvas.getContext("2d");
         console.log("Canvas context:", this.context);
         this.keys = {};
-        this.frameNo = 0;
         this.interval = setInterval(updateSnakeArea, 100);
       
    
@@ -71,7 +70,7 @@ var snakeGameArea = {
             snakeGameArea.context.clearRect(0, 0, snakeGameArea.canvas.width, snakeGameArea.canvas.height);
         },
         stop : function() {
-            alert("Game over! Press start to play again.");
+            console.log("Game ended.");
             clearInterval(snakeGameArea.interval);
         }
     }
@@ -113,30 +112,30 @@ function updateSnakeArea() {
     }
 
     // Checking collisions and win conditions for players for players
-    if (snakeCollision(headP1, playerSnake2) && snakeCollision(headP2, playerSnake1))
+    if (snakeCollision(headP1, playerSnake2) && snakeCollision(headP2, playerSnake1)) // tie
     {
       snakeGameArea.context.fillStyle = "plum";
       snakeGameArea.context.font = "bold 3em 'Jersey 10'";
       snakeGameArea.context.fillText("Tie!", 250, 200);
       snakeGameArea.stop();
+      return
+    }
+    if (snakeCollision(headP1, playerSnake1) || snakeCollision(headP1, playerSnake2) || wallCollision(headP1) || player2Score == 10) // player two wins
+    {
+      snakeGameArea.context.fillStyle = "aquamarine";
+      snakeGameArea.context.font = "bold 3em 'Jersey 10'";
+      snakeGameArea.context.fillText("Player 2 Wins!", 190, 200);
+      snakeGameArea.stop();
       return;
     }
-    if (snakeCollision(headP1, playerSnake1) || snakeCollision(headP1, playerSnake2) || wallCollision(headP1) || player2Score == 10)
-      {
-        snakeGameArea.context.fillStyle = "aquamarine";
-        snakeGameArea.context.font = "bold 3em 'Jersey 10'";
-        snakeGameArea.context.fillText("Player 2 Wins!", 190, 200);
-        snakeGameArea.stop();
-        return;
-      }
-    if (snakeCollision(headP2, playerSnake2) || snakeCollision(headP2, playerSnake1) || wallCollision(headP2) || player1Score == 10)
-      {
-        snakeGameArea.context.fillStyle = "maroon";
-        snakeGameArea.context.font = "bold 3em 'Jersey 10'";
-        snakeGameArea.context.fillText("Player 1 Wins!", 190, 200);
-        snakeGameArea.stop();
-        return;
-      }
+    if (snakeCollision(headP2, playerSnake2) || snakeCollision(headP2, playerSnake1) || wallCollision(headP2) || player1Score == 10) // player one wins
+    {
+      snakeGameArea.context.fillStyle = "maroon";
+      snakeGameArea.context.font = "bold 3em 'Jersey 10'";
+      snakeGameArea.context.fillText("Player 1 Wins!", 190, 200);
+      snakeGameArea.stop();
+      return;
+    }
     
     console.log("snake 1 length: ", playerSnake1);
     // Updates snake positions
@@ -217,7 +216,7 @@ function wallCollision(head) {
     return false;
 }
 document.getElementById("startSnakeGame").addEventListener("click", function(e){
-  // Listens for button inputs to play and restart the game
+  // Listens for button inputs to clear and playe the game
   restartSnake();
   startSnake();
 })
