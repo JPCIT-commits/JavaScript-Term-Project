@@ -44,7 +44,7 @@ Update to game mechanics to allow a player to "spike" the ball, leading to a lar
 ### Tag
 
 #### Description
-An assymetrical versus game where one player chases the other, losing health so long as they are "it". 
+An asymetric versus game where one player chases the other, losing health so long as they are "it". 
 Player 1 start's as the "it" player, having to tag player 2 to make them "it".
 Both players a have full range movement with the WASD and the Arrow Keys respectively.
 When a player's health hits 0, the game ends. 
