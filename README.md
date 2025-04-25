@@ -24,7 +24,7 @@ speed.
 ------------------------------------------------------------------------------------------------------------------
 ### Paddles
 
-#### Desicription
+#### Description
 A versus game inspired by Pong, hit the ball back and forth until it passes a player's goal. 
 The W and D keys as well as the up and down arrow keys are used to control player 1 and player 2 respectively. 
 First to five points wins.
