@@ -1,6 +1,5 @@
 ------------------------------------------------------------------------------------------------------------------
 # Plum Station Website
-This website is still under construction. It will contain three games and be flexible across devices when done.
 ------------------------------------------------------------------------------------------------------------------
 ## Games
 This website hosts three games in total. Brief overviews of each are shown below:
